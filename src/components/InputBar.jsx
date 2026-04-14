@@ -6,16 +6,16 @@ export default function InputBar({ text, onChangeText, onSizeChange, onSendPress
 
     return (
         <View style={styles.inputBar}>
-            <TextInput 
+            <TextInput
                 style={styles.textBox}
                 ref={inputRef} // 3. Assign the ref correctly
                 multiline={true}
                 onChangeText={(text) => onChangeText(text)}
                 onContentSizeChange={onSizeChange}
-                value={text} 
+                value={text}
             />
-            <TouchableHighlight 
-                style={styles.sendButton} 
+            <TouchableHighlight
+                style={styles.sendButton}
                 onPress={() => onSendPressed()}
             >
                 <Text style={{ color: 'white' }}>Send</Text>
